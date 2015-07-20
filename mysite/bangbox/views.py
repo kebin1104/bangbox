@@ -16,9 +16,14 @@ def login(request):
 
 def check(request):
     if request.method == 'POST':
-        form = request.POST['u_email']
+        post_email = request.POST['u_email']
+        post_password = request.POST['pass']
 
-        if form == 'kebin1104@nate.com':
+        data = User.objects.filter(email=post_email
+                                   ).filter(password=postpassword
+                                            ).count()
+
+        if data == 1:
             return render(request, 'bangbox/index.html')
         else:
             return render(request, 'bangbox/bang.html')
