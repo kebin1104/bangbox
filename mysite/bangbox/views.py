@@ -20,7 +20,7 @@ def check(request):
         post_password = request.POST['pass']
 
         data = User.objects.filter(email=post_email
-                                   ).filter(password=postpassword
+                                   ).filter(password=post_password
                                             ).count()
 
         if data == 1:
