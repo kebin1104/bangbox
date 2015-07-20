@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
+from bangbox.models import User
+
 # Create your views here.
 
 def index(request):
@@ -17,9 +19,9 @@ def check(request):
         form = request.POST['u_email']
 
         if form == 'kebin1104@nate.com':
-            return render(request, 'bangbox/bang.html')
-        else:
             return render(request, 'bangbox/index.html')
+        else:
+            return render(request, 'bangbox/bang.html')
 
     else:
-        return HttpResponseRedirect(request, 'bangbox/index.html')
+        return HttpResponseRedirect(request, 'bangbox/bang.html')
