@@ -108,6 +108,7 @@ USE_TZ = True
 STATIC_ROOT = "/home/ubuntu/bangbox/mysite/bangbox/templates/static"
 
 STATICFILES_DIRS = (
-    ('css', '/home/ubuntu/bangbox/mysite/bangbox/templates/static/css'))
+    "/home/ubuntu/bangbox/mysite/bangbox/templates/static/css",
+    )
 
 STATIC_URL = '/static/'
