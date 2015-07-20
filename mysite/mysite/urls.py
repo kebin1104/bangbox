@@ -17,5 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^bangbox/', include('bangbox.urls', namespace="bangbox")),
     url(r'^admin/', include(admin.site.urls)),
 ]
