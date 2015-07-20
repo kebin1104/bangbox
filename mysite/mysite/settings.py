@@ -109,6 +109,7 @@ STATIC_ROOT = "/home/ubuntu/bangbox/mysite/bangbox/templates/static"
 
 STATICFILES_DIRS = (
     "/home/ubuntu/bangbox/mysite/bangbox/templates/static/css",
+    "/home/ubuntu/bangbox/mysite/bangbox/templates/static/img",
     )
 
 STATIC_URL = '/static/'
