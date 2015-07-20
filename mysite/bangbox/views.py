@@ -20,5 +20,4 @@ def check(request):
             return HttpResponseRedirect('bangbox/bang.html')
 
     else:
-
-    return render(request, 'bangbox/index.html')
+        return render(request, 'bangbox/index.html')
