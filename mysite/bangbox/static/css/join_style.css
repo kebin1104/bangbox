@@ -1,0 +1,874 @@
+body {
+	overflow: hidden;
+	background-color: #eee;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: url(../img/intro/bg_img_.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -1;
+}
+
+input, input:hover, input:active{
+	background-color:transparent;
+	
+	}
+
+#intro_header {
+	width: 100%;
+	height:100px;
+	background-color: rgba(245,245,245,0.75);
+	border-bottom:none;
+	z-index: 1;
+}
+#intro_header > ul {
+	max-width: 400px;
+	width:100%;
+	margin: 0 auto;
+	text-align: center;
+}
+#intro_header > ul > li {
+	display: inline-block;
+	height: inherit;
+	line-height: 100px;
+	color: #aaa;
+	padding: 0 20px;
+	font-size:22px;
+}
+#intro_header > ul > #active_nav{
+	color:#545454;
+	}
+.intro_container {
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+	background-color: rgba(245,245,245,0.75);
+	overflow: hidden;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#skip_btn a {
+	position:absolute;
+	top:0;
+	right:0;
+	height:46px;
+	line-height: 46px;
+	color: #767676;
+	padding: 0 20px;
+}
+#skip_btn a:hover {
+	color: #333;
+}
+
+
+#section_title{
+	font-size:18px;
+	font-weight:bold;
+	width:100%;
+	color:#767676;
+	text-align:center;
+	margin-bottom:40px;
+	letter-spacing:3px;
+	}
+
+/*-----------join_verify---------*/
+#verify_wrap{
+	width:auto;
+	 height:auto;
+	 margin:0 auto;
+	}
+
+#verify_description {
+	width: 100%;
+	margin-top:50px;
+	color: #545454;
+	height: auto;
+	background-color:transparent;
+}
+#verify_description_wrap {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#verify_description_wrap > h1{
+	color: #333;
+	font-weight:bold;
+	font-weight:normal;
+	font-size: 16px;
+	margin-bottom:15px;
+	}
+#verify_description_wrap > h2 {
+	color: #333;
+	line-height: 150%;
+	font-weight: 100;
+	font-size: 14px;
+}
+#verify_description_wrap > h2 > a {
+	color:  #066ab3;
+}
+#verify_description_wrap > h2 > a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.verify_input_wrap {
+	max-width:365px;
+	width:100%;
+	margin: 0 auto;
+	margin-top:80px;
+	margin-bottom:200px;
+}
+
+/*.verify_select {
+	width: 30%;
+	border-radius: 3px 0 0 3px;
+	height: 40px;
+	border: none;
+	background: white;
+	float: left;
+}*/
+.verify_input {
+	padding-left: 2%;
+	width: 70%;
+	height: 46px;
+	color:#333;
+	border-bottom: 1px solid #aaa;
+	background-color:transparent;
+}
+.verify_input:hover{
+	background-color:transparent;
+	}
+.verify_input:focus{
+	background-color:transparent;
+	border-bottom: 1px solid  #066ab3;
+	}	
+.verify_input_button {
+	height: 46px;
+	width: 30%;
+	color: #066ab3;
+	float: right;
+	border-bottom: 1px solid #aaa;
+	background-color:transparent;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+
+#reissue{
+	width:100%;
+	text-align:center;
+	clear:both;
+	  padding: 10px;
+	margin:30px auto;
+	color:#656565;
+	border:none;
+	background-color:transparent;
+	}
+#reissue:hover{
+	color: #066ab3;
+	}
+
+
+/*-----------join_profile---------*/
+
+.profile_wrap {
+	max-width: 380px;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	margin: 0 auto;
+	margin-top:20px;
+	margin-bottom:80px;
+}
+/*-------upload_image------------*/
+
+.join_img_wrap {
+	width: 100%;
+	height: 70px;
+	margin-top:40px;
+	margin-bottom:10px;
+	background-color: transparent;
+	display: block;
+}
+.upload_img {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+	background: url(../img/intro/photoicon.png) no-repeat center center;
+	background-color: rgba(160,160,160,0.3);
+	border: 1px solid #eee;
+	color: #333;
+}
+.upload_img:hover {
+	cursor: pointer;
+	opacity: 0.7;
+	border:1px solid  #066ab3;
+	transition-duration: 0.3s;
+}
+
+
+/*-------------------*/
+.join_txt {
+	border: none;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 2%;
+	line-height: 46px;
+	height: 46px;
+	color:#333;
+	border-bottom: 1px solid #aaa;
+	background-color:transparent;
+}
+.join_txt > span {
+	width: 20%;
+	color:#545454;
+	height: inherit;
+	line-height: inherit;
+	float: left;
+}
+.join_input {
+	padding-left: 10px;
+	border:none;
+	border-bottom:1px solid #aaa;
+	color: #333;
+	line-height: inherit;
+	height: 46px;
+	background-color:transparent;
+	font-size: 14px;
+	max-width: 280px;
+	width: 80%;
+	float: right;
+}
+.join_input:hover {
+	border-bottom:1px solid #aaa;
+}
+.join_input:focus{
+	border-bottom:1px solid  #066ab3;
+	
+	}
+input[type=radio] {
+	display: none;
+}
+label {
+	margin-bottom: 0;
+}
+.sex_cbox {
+	max-width: 140px;
+	width: 40%;
+	height: inherit;
+	font-size: 14px;
+	line-height: inherit;
+	color: #545454;
+	font-weight: normal;
+	border: none;
+	float: right;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+}
+.sex_cbox:hover {
+	background-color:transparent;
+	color: #066ab3;
+}
+input[type="radio"]#sex_cbox_men:checked + .sex_cbox,
+input[type="radio"]#sex_cbox_women:checked + .sex_cbox  {
+	background-color:transparent;
+	color: #066ab3;
+	border-bottom:1px solid  #066ab3;
+}
+#reason {
+	width: 100%;
+	padding:10px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	color: #767676;
+	margin-bottom: 60px;
+}
+/*-------------------*/
+.join_txt2 {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  padding-left: 2%;
+  line-height: 150%;
+  height:80px;
+  color: #545454;
+  border-bottom: 1px solid #aaa;
+  background-color: transparent;
+}
+.join_txt2 > span {
+	width: 20%;
+	color:#545454;
+	height: inherit;
+	line-height: inherit;
+	float: left;
+}
+
+.join_input2 {
+	padding-left: 10px;
+	border: none;
+	color: #333;
+	height: 80px;
+	overflow:auto;
+	color:#545454;
+	background-color:transparent;
+	font-size: 14px;
+	max-width: 280px;
+	width: 80%;
+	float: right;
+}
+.join_input2:focus{
+	border-bottom:1px solid #066ab3;
+	
+	}
+#textarea {
+	resize: none;
+	line-height:150%;
+	border: 0;
+}
+/*-------------------*/
+#join_btn {
+	width: 80px;
+	height: 32px;
+	position: relative;
+	display:block;
+	margin: 0 auto;
+	clear:both;
+	background-color:transparent;
+  	border: 1px solid #767676;
+	color: #666;
+	margin-top:30px;
+}
+#join_btn:hover {
+	cursor: pointer;
+	border: 1px solid #066ab3;
+	color: #066ab3;
+	transition-delay: 0.1s;
+	transition-duration: 0.3s;
+}
+
+
+
+/*-----------join_invite---------*/
+#nav_menu{
+	width:100%;
+	max-width:200px;
+	}
+.invite_wrap {
+	max-width:600px;
+	width: inherit;
+	height:100%;
+	padding: 15px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+#nav_menu{
+	position:relative;
+	width:100%;
+	max-width:180px;
+	height: 20px;
+	margin:0 auto;
+	top:100px;
+	left:0;
+	right:0;
+	text-align: center;
+	border:none;
+	background-color:transparent;
+	z-index: 1000;
+}
+#nav_menu > a {
+	width: 100%;
+	font-size:13px;
+	height: inherit;
+	color: #767676;
+	line-height: 20px;
+	cursor: pointer;
+}
+.nav_facebook, .nav_invite {
+	display: inline-block;
+	width: 50%;
+	height: inherit;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border-right: 1px solid #bfbfbf;
+}
+.nav_invite{
+	border-right:none;
+	}
+.nav_facebook:hover {
+	color:  #066ab3;
+}
+.nav_invite:hover {
+	color:  #066ab3;
+}
+#select_menu {
+	color: #066ab3;
+}
+#select_menu2 {
+	color:  #066ab3;
+}
+/*----------find friend------------*/
+
+
+.find_sns_wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+.fb_icon {
+	background-size: cover;
+	background-color:transparent;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+.find_txt {
+	width: 100%;
+	line-height: 180%;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	text-align: center;
+	font-size: 14px;
+	color: #767676;
+}
+.find_btn {
+	width: 80px;
+  height: 32px;
+  line-height: 30px;
+  margin:0 auto;
+  margin-top:20px;
+  margin-bottom:80px;
+  text-align: center;
+  color: #767676;
+  font-weight: normal;
+  font-size: 14px;
+  background-color:transparent;
+  border: 1px solid #999;
+  padding: 0;
+  cursor: pointer;
+}
+.find_btn:hover {
+	border: 1px solid #d4af37;
+	color: #d4af37;
+	transition-delay: 0.1s;
+	transition-duration: 0.3s;
+}
+/*----------facebook after----------*/
+
+.intro_container2 {
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+	background-color: rgba(245,245,245,0.75);
+	overflow:auto;
+}
+.invite_wrap2 {
+	max-width:600px;
+	width: inherit;
+	height:auto;
+	padding: 15px;
+	margin: 0 auto;
+	margin-top:100px;
+	margin-bottom:100px;
+	text-align: center;
+	position: relative;
+}
+
+.find_friend_wrapper {
+	width:100%;
+	max-width:500px;
+	margin:0 auto;
+	height:auto;
+  margin-top: 10%;
+	text-align:center;
+}
+.fb_friend {
+	width: 25%;
+	margin: 0 auto;
+	margin-bottom:30px;
+	height: auto;
+	float:left;
+	display: inline-block;
+	text-align: center;
+}
+.fb_friend_pic {
+	margin:0 auto;;
+	width: 80px;
+	height: 80px;
+	border:1px solid #ddd;
+	background-color: #eee;
+	overflow: hidden;
+	z-index: 0;
+}
+.fb_friend_pic > img{
+	width:100%;
+	height:100%;
+	z-index:-1;
+	}
+.fb_friend_pic:hover {
+	background: url(../img/intro/follow_hover_icon.png) no-repeat center center;
+	background-color: rgba(200,100,220,0.7);
+	cursor: pointer;
+	z-index: 1000;
+}
+.fb_friend_pic:active {
+	background: url(../img/intro/follow_icon.png) no-repeat center center;
+	background-color: rgba(200,100,220,0.7);
+}
+.fb_friend_name {
+	width: 100%;
+	height: 20px;
+	color:#333;
+	line-height: 20px;
+	font-size: 15px;
+	margin-top: 5px;
+}
+/*----------facebook after follow----------*/
+
+
+.find_friend_footer {
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	background-color:transparent;
+	box-shadow: 0 -1px 15px rgba(140,140,140,0.1);
+}
+.footer_wrap{
+	width:100%;
+	  height: 100%;
+	display: table;
+	max-width:500px;
+	padding:0 15px;
+	margin:0 auto;
+	
+	}
+.vertical_align {
+	width:100%;
+	display: table-cell;
+	vertical-align: middle;
+	
+}
+.follow_info {
+	width:40%;
+	height: 32px;
+	color:#767676;
+	line-height: 32px;
+	border: none;
+	resize: none;
+	float: left;
+}
+#all_check_btn {
+	position: absolute;
+	left: -9999px;
+}
+input[type="checkbox"]#all_check_btn:checked + .all_check {
+	background-color: #98c7ed;
+	transition-duration: 0.3s;
+}
+
+.all_check, .ok_btn {
+	width: 80px;
+	height: 32px;
+	line-height: 30px;
+	float: right;
+	margin-left: 6px;
+	text-align: center;
+	color: #545454;
+	font-weight: normal;
+	font-size: 14px; 
+	background-color:transparent;
+  border: 1px solid #999;
+	padding: 0;
+	cursor: pointer;
+}
+.all_check:hover, .ok_btn:hover {
+	border: 1px solid #d4af37;
+	color: #d4af37;
+	transition-delay: 0.1s;
+	transition-duration: 0.3s;
+}
+/*----------friend---------*/
+
+.share_wrapper {
+	margin:0 auto;
+	display:block;
+	width: 100%;
+	padding: 15px;
+	height: auto;
+	text-align: center;
+}
+a > div {
+	display:inline-block;
+	background:none;
+	margin: 0 auto;
+	width: 38px;
+	height: 38px;
+	margin:10px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+#share_line{
+	width:280px;
+	height:1px;
+	background:#bbb;
+	}
+.link_share{
+	margin:0 auto;
+	margin-bottom: 80px;
+	display:block;
+	width: 100%;
+	padding: 15px;
+	height: auto;
+	text-align: center;
+	}
+.link_share p{
+	width:auto;
+	margin:0 auto;
+	font-size:13px;
+	color:#969696;
+	text-align:center;
+	position:relative;
+	top:-10px;
+	}
+.share_wrapper > a > #facebook {
+	background-image: url('../img/facebook_icon.png');
+}
+.share_wrapper > a > #instagram {
+	background-image: url('../img/instagram_icon.png');
+}
+.share_wrapper > a > #twitter {
+	background-image: url('../img/twitter_icon.png');
+}
+.share_wrapper > a > #kakaostory {
+	background-image: url('../img/kakaostory_icon.png');
+}
+.share_wrapper > a > #naver {
+	background-image: url('../img/naver_icon.png');
+}
+
+a > #link {
+	
+	background-image: url('../img/link_icon.png');
+}
+
+
+/*-----------footer---------*/
+
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background-color: transparent;
+}
+#wrapper_footer {
+	padding-top: 20px;
+	width: 96%;
+	margin: 0 auto;
+	height: 40px;
+}
+#copyright {
+	position: relative;
+	width: 40%;
+	height: 40px;
+	color: #eee;
+	font-size: 13px;
+	line-height: 40px;
+	float: left;
+}
+#footer_menu {
+	width: 60%;
+	text-align: right;
+	height: 40px;
+	float: right;
+}
+.footer_menu {
+	font-size: 0.9em;
+	line-height: 40px;
+	display: inline;
+	padding: 0 0 0 15px;
+	text-decoration: none;
+}
+#last_menu {
+	border-right: none;
+}
+#footer_menu li {
+	text-decoration: none;
+	list-style: none;
+}
+.footer_menu a, .footer_menu a:link {
+	text-decoration: none;
+	list-style: none;
+	color: #eee;
+}
+.footer_menu a:hover {
+	color: #fff;
+}
+
+@media screen and (min-width:960px) {
+}
+ @media screen and (min-width:768px) and (max-width:959px) {
+}
+ @media screen and (max-width:767px) {
+
+ }
+  @media screen and (max-width:420px) {
+	.intro_container {
+  padding: 30px;  
+	  
+  }
+  .hr_short2 {
+  display: none;
+  }
+  .profile_wrap {
+  padding: 0; 
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#reason {
+	margin-bottom: 30px;
+}
+ 
+/* 스마트폰 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+
+/* 스마트폰 (가로 ) ----------- */
+@media only screen and (min-width : 321px) {
+
+}
+
+/* 스마트폰 (세로) ----------- */
+@media only screen and (max-width : 320px) {
+
+}
+
+/* 아이패드 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
+
+/* 아이패드 (가로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+}
+
+/* 아이패드 (세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* PC 및 노트북 ----------- */
+@media only screen and (min-width : 1224px) {
+/* 사용자 코드 */
+}
+
+/* 대형 스크린 ----------- */
+@media only screen and (min-width : 1824px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 5 & 5S 가로 및 세로 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+
+}
+/* 아이폰 5 & 5S 가로 ------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 5 & 5S 세로 ------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 세로 및 가로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 가로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 세로 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 가로 및 세로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 가로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+/* 사용자 코드 */
+}
+
+/* 아이폰 6 Plus 세로 */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 가로 및 세로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 가로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
+/* 사용자 코드 */
+}
+
+/* 아이패드 미니 세로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
+/* 사용자 코드 */
+}
+ 

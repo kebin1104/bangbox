@@ -7,3 +7,6 @@ def index(request):
 
 def bang(request):
     return render(request, 'bangbox/bang.html')
+
+def login(request):
+    return render(request, 'bangbox/login.html')
