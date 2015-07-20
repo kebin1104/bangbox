@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	width: 100%;
+	height: 100%;
+	scrollbar-3dLight-Color: rgba(255,255,255,0);
+	scrollbar-arrow-color: #ddd;
+	scrollbar-base-color: #eee;
+	scrollbar-Face-Color: #ddd;
+	scrollbar-Track-Color: #eee;
+	scrollbar-DarkShadow-Color: #ccc;
+	scrollbar-Highlight-Color: #eee;
+	scrollbar-Shadow-Color: #ddd;
+}
+
+
+/* Chrome, Safari용 스크롤 바 */
+::-webkit-scrollbar {
+width: 9px;
+height: 4px;
+border: 1px solid rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+display: block;
+height: 10px;
+background: rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar-track {
+background:rgba(255,255,255,0.1);
+-webkit-border-radius:0;
+border-radius:0;
+}
+::-webkit-scrollbar-thumb {
+height: 30px;
+width: 30px;
+background:#ccc;
+-webkit-border-radius: 1px;
+border-radius:1px;
+-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.4)
+}

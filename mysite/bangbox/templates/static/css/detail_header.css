@@ -1,0 +1,48 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/*===============header===============*/
+
+a, a:link {
+	text-decoration: none;
+	list-style: none;
+	color: #333;
+}
+/*--- header ---*/
+
+header {
+	width:100%;
+	background-color: rgba(255,255,255,0);
+	z-index: 1;
+}
+
+.main_menu {
+	width:inherit;
+	margin-left: auto;
+	height: 60px;
+	line-height: 60px;
+}
+#back_btn{
+	background:url(../img/back_btn3.png) no-repeat center center ;
+	width:40px;
+	height:40px;
+	float:right;
+	border:none;
+	margin-top:10px;
+	margin-right:10px;
+	cursor: pointer;
+	opacity:0.3;
+	}
+#back_btn:hover{
+	opacity:1;
+	}	
+.main_menu #logo {
+	background:url(../img/unboxlogo.png) no-repeat center center ;
+	width:100px;
+	height:35px;
+	float:left;
+	margin-top:17px;
+	margin-right: 40px;
+	cursor: pointer;
+}
