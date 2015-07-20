@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -16,7 +17,7 @@ def check(request):
         form = request.POST['u_email']
 
         if form == 'kebin1104@nate.com':
-            return render(request, 'bangbox/bang.html')
+            return HttpResponseRedirect(request, 'bangbox/bang.html')
 
     else:
-        return render(request, 'bangbox/index.html')
+        return HttpResponseRedirect(request, 'bangbox/index.html')
