@@ -22,6 +22,7 @@
             <div class="login_wrap">
             	<h1>unbox</h1>
                 <form action="{% url 'bangbox:index' %}" method="post">
+                    {% csrf_token %}
                         <input type="email" name="u_email" placeholder="이메일" id="email" />
                         <input type="password" name="pass" placeholder="비밀번호" style="border-bottom:none;"/>
                         <div id="chk_box_wrap">
