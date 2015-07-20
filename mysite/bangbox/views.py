@@ -14,14 +14,12 @@ def login(request):
 
 def check(request):
     if request.method == 'POST':
-        form = NameForm(request.POST)
+        form = request.POST['u_email']
 
         if form.is_valid():
-            new_name = form.cleaned_data['u_mail']
 
             return HttpResponseRedirect('bangbox/bang.html')
 
     else:
-        form =NameForm()
 
     return render(request, 'bangbox/index.html')
