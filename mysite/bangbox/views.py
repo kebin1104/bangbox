@@ -17,7 +17,7 @@ def check(request):
         form = request.POST['u_email']
 
         if form == 'kebin1104@nate.com':
-            return HttpResponseRedirect('bangbox/bang.html')
+            return render(request, 'bangbox/bang.html')
 
     else:
         return render(request, 'bangbox/index.html')
