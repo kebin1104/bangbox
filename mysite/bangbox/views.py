@@ -16,7 +16,7 @@ def check(request):
     if request.method == 'POST':
         form = request.POST['u_email']
 
-        if form.is_valid():
+        if form == 'kebin1104@nate.com':
             return HttpResponseRedirect('bangbox/bang.html')
 
     else:
