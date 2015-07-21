@@ -6,7 +6,7 @@
 
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scal=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
     
-	<title>unbox 회원가입</title>
+	<title>bangbox 회원가입</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href="{% static 'css/unbox_custom.css' %}" rel="stylesheet">
 	<link type="text/css" href="{% static 'css/intro_style.css' %}" rel="stylesheet" >
@@ -17,7 +17,7 @@
 
     <div class="container">
         <div class="login_wrap">
-        	 <h1>unbox</h1><br>
+        	 <h1>bangbox</h1><br>
               <form action="#" method="post">
                     <div class="shadow">
                         <input type="email" name="u_email" placeholder="이메일" id="email" />
@@ -45,7 +45,7 @@
               </form>
     
               <div class="login_help">
-                  <a href="login.html">이미 회원이신가요? 로그인</a>
+                  <a href="{% url 'bangbox:login' %}">이미 회원이신가요? 로그인</a>
               </div>
         </div>    
         
