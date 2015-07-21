@@ -20,6 +20,9 @@ def signup(request):
 def event_page(request):
     return render(request, 'bangbox/event_page.html')
 
+def participation_page(request):
+    return render(request, 'bangbox/Participation_page.html')
+
 def login_check(request):
     if request.method == 'POST':
         post_email = request.POST['u_email']
