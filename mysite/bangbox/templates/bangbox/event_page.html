@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>unbox 이벤트 자세히보기</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scal=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	
+    <link href="{% static 'css/unbox_custom.css' %}" rel="stylesheet">
+	<link href="{% static 'css/event_page.css' %}" rel="stylesheet">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  	<script src="{% static 'js/unbox_custom.js' %}"></script>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="delay" class="loading" name="delay"></div>
+    
+    <!--btn_top-->
+    <a class="page-scroll hover_effect" href="body" id="btn_top"></a>
+
+
+    <!--=====Main Menu======-->
+    <header id="detail_header">
+        <nav class="main_menu">
+        	<!--<a href="index.html"><div id="home_btn"></div></a>-->
+        	<input type="button" onclick="history.go(-1)"  id="back_btn">
+            <!-- if link
+            <a class="login_btn" href="signup.html">가입</a>
+        	<a class="login_btn" href="login.html">로그인</a>
+            -->
+        </nav>
+    </header>	
+    <section class="container">
+        <!--=====Event Picture======-->
+        <div class="event_img_wrap">
+            <div class="prev_btn"><a href="#"></a></div>
+                <div class="next_btn"><a href="#"></a></div>
+                <div class="event_img">
+                <img class="img-responsive" src="{% static 'img/event1_full.jpg' %}">
+                
+            </div>
+        </div>
+        <!--============================-->
+        <article class="event_page_detail">
+            <!--Title-->
+            <div id="event_title_wrap">
+                <h1 id="event_detail_title">폴 매카트니의 연주</h1>
+                <div class="event_detail_category">
+                     <img class="category_icon img-circle" src="{% static 'img/event_page/1.png' %}">
+                     <p id="category">연극</p>
+                </div>
+            </div>
+            <p id="short_description">이벤트 한 줄 요약하는 곳입니다.</p>
+            <p id="long_description">비즐즈 멤버인 폴 매카트니의 아내 린다 매카트니는 사진 작가로서 자신의 주변 소소함을 일생동안 담아냇다. 사진을 찍으면서 자아를 찾아간 란다. 매카트니는 사진 속 유리창을 이용해 찍은 작품이 유독 많다. 비틀즈 멤버인 폴매카트니의 아내 린다.<br><br>
+              매카트니는 사진 작가로서 자신의 주변 소소함을 일생동안 담아냇다. 사진을 찍으면서 자아를 찾아간 란다. 매카트니는 사진 속 유리창을 이용해 찍은 작품이 유독 많다. 비틀즈 멤버인 폴매카트니의 아내 린다. 비즐즈 멤버인 폴 매카트니의 아내 린다 매카트니는 사진 작가로서 자신의 주변 소소함을 일생동안 담아냇다.
+            </p>
+         </article>
+         <div class="event_page_detail">   
+            <div class="hashtag_share_row">
+                <span id="hashtag">태그 : #비틀즈, #매카트니, #사진</span>
+                <span id="share_bookmark">
+                   
+                   
+                  <!--<div class="share_icon" id="bookmark_icon"></div>-->
+                  <a href="#event_share" class="text-center" data-toggle="modal">
+                  	<div class="share_icon" id="share_icon"></div>
+                  </a>
+                </span>
+            </div>
+            <hr id="event_detail_hr"/>
+            <div class="section_wrap">
+                  <div class="event_creator">
+                    	<div class="small_header" id="attendee_title">개설자</div>
+                  </div>
+                  <div class="event_creator" id="event_creator_margin">
+                        <div class="profile_wrap">
+                                  <img id="profile_pic" src="{% static 'img/6.jpg' %}">
+                                  <div id="profile_name">신연석</div>
+                        </div>
+                        <div id="description_wrap">
+                                  <textarea id="description" readonly>디자인을 좋아하는 신연석입니다. 사진전을 열게되어 기쁘네요. 많은 참여 부탁드립니다.</textarea>
+                                  <a href="" id="webpage">www.m.blog.naver.com/unbox</a>
+                                  <input type="button" value="팔로우+" class="clickable" id="follow_btn" onclick="go_follow()">
+                       </div>
+				  </div>
+            </div>  
+             <!---====----> 
+             <hr id="event_detail_light_hr" />
+            <!---attendee---->
+            <div id="event_attendee">
+            
+                <!---left-section---->
+                <div id="wrap_left">
+                	 <div class="section_title">
+                          <span class="small_header" id="attendee_title">참여자</span>
+                          <span class="small_header_desc">+39명</span>
+                	 </div>
+                     <div class="section_contents">
+                         <span class="profile_img_50x50"><img class="img-responsive" src="{% static 'img/4.jpg' %}"></span>
+                         <span class="profile_img_50x50"><img class="img-responsive" src="{% static 'img/3.jpg' %}"></span>
+                         <span class="profile_img_50x50"><img class="img-responsive" src="{% static 'img/2.jpg' %}"></span>
+                         <span id="plus_icon"></span>
+                         <span class="clickable" id="view_attendee_list">
+                             <a href="#participation_member" class="text-center clickable" data-toggle="modal" style="color:#71a5cc">명단보기</a>                                
+                         </span>
+                     </div>
+                </div>
+                         
+                <!---right-section---->
+                <div id="wrap_right">
+                	 <div class="section_title">
+                          <span class="small_header" id="comment_title">댓글</span>
+                          <span class="small_header_desc" id="comment_number">+20</span>
+                     </div> 
+                     <div class="section_contents">
+                         <span class="profile_img_50x50"><img class="img-responsive" src="{% static 'img/1.jpg' %}"></span>
+                         <div id="comment_wrap">
+                              <div id="comment_name">이승호</div>
+                              <div id="comment">재밋을것 같네요! 저도 빨리 참여하고싶네요!!!ㅋㅋㅋ</div>
+                         </div>
+                         <span class="clickable" id="write_comment">
+                              <a href="#make_reply" class="text-center clickable" data-toggle="modal" style="color:#71a5cc">댓글달기</a>    
+                         </span>
+                     </div>
+                </div>
+                <!---====---->
+            </div>
+            <hr id="event_detail_light_hr" />
+
+            
+            <div class="small_header small_margin_top">장소</div>
+            
+            
+            <div id="location_wrap">
+                <span class="location_info">서울시 종로구 경복궁로 237-2 대림미술관 2F</span>
+                <span class="clickable" id="view_map">지도 보기</span>
+            </div>
+            
+            <hr id="event_detail_light_hr" />
+            
+            <div class="small_header small_margin_top">선택사항</div>
+            
+             <!---date_select---->
+             
+            <div>
+                <span class="date_info">날짜</span>
+                <span class="date_info">4월22일 - 4월27일</span>
+            </div>
+            
+           
+            <div>
+                <form class="date_select_wrap select_list">
+                    <input type="radio" id="date_select1" value="" name="date_select"/>
+                    <label for="date_select1" class="date_select"><font>4/25</font><br>월요일</label>
+                    <input type="radio" id="date_select2" value="" name="date_select"/>
+                    <label for="date_select2" class="date_select"><font>4/26</font><br>화요일</label>
+                    <input type="radio" id="date_select3" value="" name="date_select"/>
+                    <label for="date_select3" class="date_select"><font>4/27</font><br>수요일</label>
+                 </form>     
+            </div>
+            <!---time_select---->
+            <div>
+                <span class="time_info">시간</span>
+                <span class="time_info">AM 9:00 - PM 4:00</span>
+                <!--<span class="small_header_desc small_margin_top" style="float:right;margin-right:3%">평일 9:00-13:00 | 주말 13:00-17:00</span>-->
+            </div>
+            
+            <div class="select_list">
+                <form>
+                	<input type="radio" id="time_select1" name="time_select" onclick="price_1(1)">
+                    <label for="time_select1" class="time_select">
+                        <span>PM 1:00 ~ 3:00</span><span class="price">5000원</span>
+                    </label>
+                    <input type="radio" id="time_select2" name="time_select" onclick="price_1(1)">
+                    <label for="time_select2" class="time_select">
+                        <span>PM 3:00 ~ 5:00</span><span class="price">5000원</span>
+                    </label>
+                    <input type="radio" id="time_select3" name="time_select" onclick="price_1(1)">
+                    <label for="time_select3" class="time_select">
+                        <span>PM 5:00 ~ 7:00</span><span class="price">5000원</span>
+                    </label>
+                </form>
+            </div> 
+            <div style="width:100%; height:100px; background-color:transparent;"></div> 
+       </div> <!--event_page_detail-->
+
+  </section> <!--Container End-->
+  
+  
+  
+  
+  <!--footer-->
+  <footer id="footer">
+  	<div class="container">
+      <div class="footer_wrap">
+        <span><a href="unbox_suggest.html">unbox에 문의하기</a></span>
+        <a href="#payment" class="text-center" data-toggle="modal">
+        	<button class="join_btn">참여하기</button>
+        </a>
+        <span class="total_price">₩ 0</span>
+       </div>
+        
+      </div>
+  </footer>
+</body>
+
+
+	<!--modal popup1 attendant-->
+
+	<div class="modal fade in" id="participation_member" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content popup_section">
+				<div class="modal-header">
+                	<div class="vertical_align">
+                         <p class="section">참여자 명단
+                             <span class="section_info">4명</span>
+                         </p>
+                         <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">
+                            <img src="{% static 'img/participation_page/x_btn.png' %}">
+                         </button>
+                     </div>    
+                 </div>
+                 <div class="popup_wrap">
+                 	 <div class="popup_contents_wrap" id="scroll">
+                         <div class="follow">
+                         	  <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="{% static 'img/3.jpg' %}">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">초대</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="{% static 'img/2.jpg' %}">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">초대</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/4.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">초대</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="{% static 'img/1.jpg' %}">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">초대</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="{% static 'img/6.jpg' %}">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">초대</button>
+                         </div>
+                         
+                     </div>
+                     <div class="modal-footer1">
+                     	  <div class="vertical_align">
+                             <input type="checkbox" id="all_check" value="" name="all" />
+                             <label for="all_check" class="all_check_btn">전체 팔로우</label>
+                         </div>
+                 	 </div>
+                 </div>    
+                 
+          	</div><!--modal-content end-->
+		</div>
+	</div>
+		
+        
+   <!--modal popup2 comment-->
+	<div class="modal fade in" id="make_reply" aria-hidden="false">
+		<div class="modal-dialog ">
+			<div class="modal-content popup_section">
+				<div class="modal-header">
+                	<div class="vertical_align">
+                         <p class="section">댓글
+                             <span class="section_info">15</span>
+                         </p>
+                         <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">
+                            <img src="{% static 'img/participation_page/x_btn.png' %}">
+                         </button>
+                     </div>
+                 </div>
+                 
+                 <div class="popup_wrap">
+                 	<div class="popup_contents_wrap" id="scroll">
+                        <div class="comments">
+                            <a href="profile.html">
+                            <div class="user_pic">
+                                <img src="../static/img/1.jpg">
+                            </div>
+                            </a>
+                            <div class="user_comment_wrap">
+                                <div class="user_name">이승호</div>
+                                <p class="comments_text">이 행사는 스타트업 관계자를 대상으로한 행사입니다. 스타트업을 준비하고 계시거나, 
+            스타트업에서 일하고 있으신 관계자를 대상으로 한 행사이오니 유의하시기 바랍니다.</p>
+                                <div class="more_btn">
+                                    <img src="{% static 'img/Participation_page/more_btn.png' %}">
+                                     <ul class="more_btn_wrap">
+                                         <li class="more_btn_list">댓글 수정</li>
+                                         <li class="more_btn_list">댓글 삭제</li>
+                                         <li class="more_btn_list">신고하기</li>
+                                     </ul>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="comments">
+                            <a href="profile.html">
+                            <div class="user_pic">
+                                <img src="../static/img/2.jpg">
+                            </div>
+                            </a>
+                            <div class="user_comment_wrap">
+                                <div class="user_name">김지혜</div>
+                                <p class="comments_text">마케팅이라 재밌고 어렵겠네요~^^</p>
+                                <div class="more_btn">
+                                    <img src="{% static 'img/Participation_page/more_btn.png' %}">
+                                     <ul class="more_btn_wrap">
+                                         <li class="more_btn_list">댓글 수정</li>
+                                         <li class="more_btn_list">댓글 삭제</li>
+                                         <li class="more_btn_list">신고하기</li>
+                                     </ul>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="comments">
+                            <a href="profile.html">
+                            <div class="user_pic">
+                                <img src="../static/img/3.jpg">
+                            </div>
+                            </a>
+                            <div class="user_comment_wrap">
+                                <div class="user_name">한아름</div>
+                                <p class="comments_text">미래의 방향과 가치를 알아내고 서로 공유하는 유익한 자리에 꼭 참석하고 싶네요!</p>
+                                <div class="more_btn">
+                                    <img src="../static/img/Participation_page/more_btn.png">
+                                     <ul class="more_btn_wrap">
+                                         <li class="more_btn_list">댓글 수정</li>
+                                         <li class="more_btn_list">댓글 삭제</li>
+                                         <li class="more_btn_list">신고하기</li>
+                                     </ul>
+                                </div>
+                           </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer1">
+                      	 <div class="vertical_align">
+                             <div id="my_comments">
+                                <a href="profile.html">
+                                    <div class="my_pic">
+                                        <img src="../static/img/7.jpg">
+                                    </div>
+                                </a>
+                                <input type="button" id="comment_enter" value="입력">
+                                <textarea placeholder="댓글을 입력해주세요." class="my_comments"></textarea>
+                                
+                            </div>
+                         </div>
+                    </div>  
+                </div>  
+               
+				
+			</div><!--modal-content end-->
+		</div>	
+	</div>
+    
+    <!--modal popup payments-->
+    <div class="modal fade in" id="payment" aria-hidden="false">
+		<div class="modal-dialog2">
+			<div class="modal-content3 popup_section">
+                 <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">
+                      <img src="../static/img/participation_page/x_btn.png">
+                  </button>
+                  <div class="event_title_wrap">
+                            	<p id="event_title">이벤트 제목</p>
+                            	<p id="event_date">2015년 4월 25일 16:00 - 17:00</p>
+                          </div>
+                          <div class="event_booking_wrap">
+                                <div class="booking_summary">
+                                	<div class="">
+                                    <span>1장</span><span class="right_sm">5,000원</span><br/>
+                                    <span>장수</span><span class="right_sm">2장</span><br/>
+                                    <hr class="hr2">
+                                    <span>합계</span><span class="right_sm" id="1st_ticket">10,000 원</span>
+                                    </div>
+                                </div>
+                                <select name="list" id="ticket_count">
+                                         <option value="">1</option>
+                                         <option value="">2</option>
+                                         <option value="">3</option>
+                                         <option value="">4</option>
+                                         <option value="">5</option>
+                                         <option value="">6</option>
+                                         <option value="">7</option>
+                                         <option value="">8</option>
+                                         <option value="">9</option>
+                                         <option value="">10</option>
+                                         <option value="">11</option>
+                                         <option value="">12</option>
+                                 </select>
+                                	<!--
+                                	<div class="ticket_count_button_wrap">
+                                    	<div class="ticket_count_button">1</div>
+                                        <div class="ticket_count_button" id="ticket_count_button_select">2</div>
+                                        <div class="ticket_count_button">3</div>
+                                    	
+                                    </div>
+                                 	<div class="ticket_count_up_down_wrap">
+                                    	<div class="ticket_count_up_icon">
+                                        	<div id="upicon"></div>
+                                        </div>
+                                        <div class="ticket_count_down_icon">
+                                        	<div id="downicon"></div>
+                                        </div>
+                                    </div>
+                                	-->
+                            </div>
+                           <div class="modal-footer2">
+                               <button class="btn3" onclick="location.href='event_share.html'"/>결제하기</button>
+                          </div>	
+          	</div><!--modal-content end-->
+		</div>
+	</div>
+    
+    
+ 
+	<!--=====modal popup share======-->
+    <div class="modal fade in" id="event_share" aria-hidden="false">
+		<div class="modal-dialog2">
+			<div class="modal-content3 popup_section">
+                 <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">
+                      <img src="../static/img/participation_page/x_btn.png">
+                  </button>
+                  <div class="sns_icon_wrap">
+                               <a href="#" ><div class="icon" id="facebook"></div></a>
+                               <a href="#" ><div class="icon" id="instagram"></div></a>
+                               <!--<a href="#" ><div class="icon" id="twitter"></div></a>-->
+                               <a href="#" ><div class="icon" id="kakaostory"></div></a>
+                               <a href="#" ><div class="icon" id="naver"></div></a>
+                               <a href="#" ><div class="icon" id="link"></div></a>
+                               <div style="clear:both"></div>
+                 </div>
+          	</div><!--modal-content end-->
+		</div>
+	</div>
+    
+ 
+</html>

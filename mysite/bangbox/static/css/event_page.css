@@ -1,33 +1,9 @@
+
+
 #btn_top {
   bottom: 85px;
 }
-.prev_btn{
-	width:50px;
-	height:50px;
-	position:fixed;
-	top:48%;
-	left:5px;
-	background:url(../img/event_page/prev_btn.png) no-repeat center center;
-	background-color:rgba(255,255,255,0.3);
-	cursor:pointer;
-	opacity:0.5;
-	z-index:5;
-	}
-.next_btn{
-	width:50px;
-	height:50px;
-	position:fixed;
-	top:48%;
-	right:5px;
-	background:url(../img/event_page/next_btn.png) no-repeat center center;
-	background-color:rgba(255,255,255,0.3);
-	cursor:pointer;
-	opacity:0.5;
-	z-index:5;
-	}
-.prev_btn:hover, .next_btn:hover{
-	opacity:1;
-	}
+
 
 .login_btn{
 	float:right;
@@ -39,31 +15,31 @@
 	}
 /*-----link_event_title------*/
 #link_wrap {
-	position: absolute;
-	top: 43%;
-	left: 5%;
-	right: 5%;
 	width: 90%;
 	padding: 2%;
 	height: 12%;
 }
 #link_wrap #event_title {
-	font-size: 1.7em;
+	font-size: 22px;
 	color: #333;
 	margin-bottom: 20px;
 	font-weight: bold;
 	text-align: center;
 }
 #link_wrap #event_date {
-	font-size: 15px;
+	font-size: 14px;
 	color: #545454;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	text-align: center;
 }
 /*-----event_image------*/
+.event_img_wrap{width:auto;
+height:auto;
+position:relative;}
 
 .event_img {
+	position:relative;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 110px;
@@ -79,6 +55,35 @@
 	height:auto;
 	
 	}
+	
+.prev_btn{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:48%;
+	left:-50px;
+	background:url(../img/event_page/prev_btn.png) no-repeat center center;
+	background-color:rgba(255,255,255,0.3);
+	cursor:pointer;
+	opacity:0.5;
+	z-index:5;
+	}
+.next_btn{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:48%;
+	right:-50px;
+	background:url(../img/event_page/next_btn.png) no-repeat center center;
+	background-color:rgba(255,255,255,0.3);
+	cursor:pointer;
+	opacity:0.5;
+	z-index:5;
+	}
+.prev_btn:hover, .next_btn:hover{
+	opacity:1;
+	}	
+	
 /*-----event_detail------*/	
 
 .event_page_detail {
@@ -258,7 +263,6 @@
 	color:#5f8774;
 	width: 100%;
 	padding-right:70px;
-	font-size: 15px;
 }
 .event_creator #webpage:hover {
 	text-decoration: underline;
@@ -273,7 +277,6 @@
 	color: #71a5cc;
 	border: none;
 	background-color: transparent;
-	font-size: 15px;
 }
 #follow_btn:hover {
 	text-decoration: underline;
@@ -354,14 +357,19 @@
 #comment {
 	width: 100%;
 	height: 25px;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 25px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 /*------------map------------*/	
-
+#location_wrap{
+	width:100%;
+	height:auto;
+	margin-bottom:60px;
+	position:relative;
+	}
 .location_info {
 	width: 100%;
   padding-right: 80px;
@@ -369,9 +377,9 @@
 	color: #767676;
 }
 #view_map {
-	clear: both;
-	float: right;
-	margin-bottom: 60px;
+	position:absolute;
+	right:0;
+	top:0;
 }
 #event_detail_hr {
 	position: relative;
@@ -400,9 +408,10 @@
 	width:100%;
 	margin-bottom:15px;
 	color: #adadad;
+	  font-size: 14px;
 }
 .small_header_desc {
-	font-size: 15px;
+	font-size: 14px;
 	color: #767676;
 	margin-left: 10px;
 }
@@ -583,15 +592,6 @@ input[type="radio"]#time_select3:checked + .time_select
 	z-index: 1;
 }
 
-/*=============modal popup2 comment================*/
-.user_comment_wrap {
-  position: relative;
-  width: 83%;
-}
-.comments_text {
-  margin-bottom: 26px;
-  width: 90%;
-}
 /*=============modal popup3 ticket buy================*/
 .modal-content2 {
 	position: relative;
@@ -677,21 +677,20 @@ input[type="radio"]#time_select3:checked + .time_select
 	  width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  height: 180px;
-  padding: 1px;
+  height: 160px;
 	background-color:#f5f5f5;
 }
 .booking_summary{
 	width:100%;
 	height:100%;
 	float:left;
-	padding:50px;
-	padding-right:160px;
+	padding:40px;
+	padding-right:150px;
 	}
 #ticket_count{
 	position:absolute;
 	right:30px;
-	top:65px;
+	top:55px;
 	width:80px;
 	height:50px;
 	
@@ -707,7 +706,7 @@ input[type="radio"]#time_select3:checked + .time_select
 	float:right;
 	}
 .hr2{
-	width:108px;
+	  width: 132px;
 	height:1px;
 	margin:10px 0;
 	background-color:#ccc;
@@ -870,38 +869,114 @@ input[type="radio"]#time_select3:checked + .time_select
 	transition:all 0.3s;
 	}
  @media screen and (max-width:420px) {
+#btn_top {
+  bottom: 65px;
+}
+	 
 .prev_btn, .next_btn{
 	display:none;
 	} 	 
 .event_img {
   margin-top:0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   border:none;
 }
 .event_page_detail {
+	position: relative;
 	padding:0 15px;
 }
+.event_page_detail #event_detail_title{
+	 font-size: 17px;
+	 width:100%;
+	 height: auto;
+	 float:none;
+	 padding:15px 0 ;
+	}
+	
+.event_page_detail .event_detail_category {
+	position:absolute;
+	top:60px;
+	left:0;
+	width:100%;
+	padding:0 15px;
+	clear:both;
+	float: none;
+	font-size: 12px;
+	height:45px;
+	line-height: 45px;
+	margin:15px auto;
+	color: #71a5cc;
+	background-color:#f3f3f3;
+}
+.category_icon {
+	position:relative;
+	top:7.5px;
+	width: 30px;
+	height: 30px;
+	border: none;
+	display: block;
+	background-color:transparent;
+	border:1px solid #08c;
+}
+#category {
+	float:left;
+	margin:0 6px;
+}	
+	
 .event_page_detail #short_description {
   clear: both;
-  margin-top: 30px;
-  font-size: 16px;
-  color: #066ab3;
+  margin-top: 0;
+  padding-top: 100px;
+  font-size: 13px;
+  color: #08c;
   color: #333;
 }
 
-
+.event_page_detail #long_description{
+	font-size: 13px;
+	} 
+.event_page_detail .hashtag_share_row #hashtag{
+	font-size: 13px;
+	}	
+	
 .section_wrap {
   width: 100%;
   height: auto;
   margin:0;
 }
+.small_header, .small_header_desc, #webpage, #comment  {
+	
+font-size: 12px;
 
+}
 .event_creator #description {
-	color: #545454;
-	  min-height: 50px;
-	padding-right:70px;
-	font-size: 13px;	 
+	font-size: 12px;	 
+	  padding-right: 60px;
  }
+ 
+ .location_info {
+  width: 100%;
+  padding-right: 60px;
+  font-size: 13px;
+ }
+
+ 
+ 
+ 
+ .date_info, .time_info {
+  margin-right: 10px;
+  font-size: 13px;
+ }
+ 
+ .date_select {
+  max-width: 120px;
+  width: 25%;
+  height: inherit;
+  font-size: 13px;
+ }
+ .time_select{
+	 font-size: 13px; 
+	 }
  
  
  #wrap_left {
@@ -916,8 +991,46 @@ input[type="radio"]#time_select3:checked + .time_select
   line-height: 46px;
     margin: 30px 0;
 }
-.footer_wrap {
-	padding:0 15px;
-}
 
+
+
+
+
+
+
+/*-- 자세히보기 푸터(결제) --*/
+#footer {
+  height: 50px;
+}
+.footer_wrap {
+  width: 100%;
+  height: auto;
+  line-height: auto;
+  margin:0;
+}
+.footer_wrap {
+	padding:0;
+}
+.footer_wrap span {
+  font-size: 13px;
+  display:none;
+}
+.footer_wrap .total_price{
+	display:none;
+	}
+.footer_wrap .join_btn {
+  width: 100%;
+  height: 50px;
+  margin-left:0;
+  line-height: 50px;	
+	
+ }
+ .hr2 {
+  width: 118px;
+ }
+ .booking_summary {
+  padding: 40px;
+  padding-right: 130px;
+ }
+ 
  }

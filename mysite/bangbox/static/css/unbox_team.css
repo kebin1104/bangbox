@@ -1,84 +1,4 @@
 
-/*----------header----------*/
-/*
-header {
-	position:absolute;
-	top:0;
-	background-color:rgba(255,255,255,0.3);
-	border-bottom: 1px solid rgba(240,240,240,0.1);
-	}
-
-.main_menu {
-	width: 100%;
-	margin-left: auto;
-	height: 46px;
-	line-height: 46px;
-	display: inline-block;
-}
-.main_menu #logo {
-	background: url(../img/unboxlogogray.png) no-repeat center center;
-	background-size: cover;
-	width: 90px;
-	height: 30px;
-	float: left;
-	margin-top: 6px;
-	margin-right: 40px;
-	cursor: pointer;
-}
-.main_menu .menu_item {
-	height: inherit;
-	margin-right: 8px;
-}
-.main_menu .menu_item a {
-	color: #ccc;
-	height: inherit;
-	font-size: 14px;
-	padding: 14px 5px;
-	letter-spacing: -0.4px;
-	cursor: pointer;
-	font-weight: normal;
-}
-.main_menu .menu_item a:hover {
-	color: #f1f1f1;
-	font-weight: bold;
-}
-#menu_item_active {
-	color: #f1f1f1;
-	font-weight: bold;
-}
-.menu_icon {
-	display: inline-block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	width: 44px;
-	height: 46px;
-	float: right;
-}
-.main_menu .menu_icon_more {
-	background-image: url('../img/bt_moregray.png');
-	cursor: pointer;
-	padding-right: 0;
-}
-.main_menu .menu_icon_more:hover {
-	background-image: url('../img/bt_moregray_hover.png');
-}
-.main_menu .menu_icon_push {
-	background-image: url('../img/bt_pushgray.png');
-	cursor: pointer;
-}
-.main_menu .menu_icon_push:hover {
-	background-image: url('../img/bt_pushgray_hover.png');
-}
-.main_menu .menu_icon_search {
-	background-image: url('../img/bt_searchgray.png');
-	cursor: pointer;
-}
-.main_menu .menu_icon_search:hover {
-	background-image: url('../img/bt_searchgray_hover.png');
-}	
-	*/
-	
 	
 /*--unbox video--*/	
 .cam_container{
@@ -121,7 +41,7 @@ header {
 	display:block;
 	margin:0 auto;
 	width:100%;
-	max-width:500px;
+	max-width:400px;
 	height:auto;
 	background-color:#eee;
 	z-index:1;
@@ -134,6 +54,66 @@ header {
 	 line-height: 1.7;
 	 color: #545454;
 }
+	
+/*--unbox work--*/	
+.work_container{
+	background-color:#fafafa;
+	width: 100%;
+	height: auto;
+	min-height:200%;
+	padding:150px 15px 50px 15px;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	}
+.work_container	h1{
+	color:#333;
+	}
+.work_wrap{
+	max-width:1000px;
+	width:100%;
+	margin-top:40px;
+	}
+.work_contents{
+	width:100%;
+	margin:0 auto;
+	float:left;
+	margin-bottom:180px;
+	}	
+.content1{
+	float:left;
+	padding-right:30%;}	
+.content2{
+	float:right;
+	padding-left:40%;
+	margin-bottom:260px;
+	}
+.content3{
+	float:right;
+	width:60%;
+	padding:0;}
+.content4{
+	float:left;
+	width:40%;
+	padding-right:3%;}	
+.work_contents img{
+	width:100%;
+	height:auto;
+	}
+.work_contents p{
+	width:100%;
+	padding:20px 10px;
+	font-size:14px;
+	}		
 /*--unbox philosophy--*/
 .philosophy_container{
 	
@@ -327,4 +307,125 @@ footer {
 	margin-top: 0;
 	border-top: 1px solid #040404;
 	background-color: #090909;;
-}		
+}
+
+/*--- 언박스 홍보영상 ---*/
+
+
+/*---- modal-content3 ---*/
+.modal-open .modal {
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	width: auto;
+	height: 100%;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: rgba(255,255,255,0.9);
+	}
+.modal-dialog-video{
+	width: 100%;
+	margin: 0 auto;
+}
+	
+.modal-content3 {
+	position:static;
+	background-color:#fefefe;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-radius: 0;
+	outline: 0;
+	width:100%;
+	height: 100%;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.1);
+	box-shadow: 0 3px 9px rgba(0,0,0,.1);
+}
+.modal-content3 .section{
+	height:40px;
+	line-height:40px;
+	padding-left:15px;
+	  font-size: 15px;
+	}
+.modal-content3 .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}	
+.video_player{
+	width:100%;
+	height:auto;
+	}		
+	
+.video_player video,
+.video_player iframe{
+	display: block;
+  text-align: center;
+  margin: 0 auto;
+	width:100%;
+	}	
+   @media screen and (max-width:420px) {
+
+.work_container {
+  padding: 50px 15px;
+}
+
+.work_contents{
+	width:100%;
+	margin:0 auto;
+	float:left;
+	margin-bottom:80px;
+	}	
+.content1{
+	float:left;
+	padding-right:20%;}	
+.content2{
+	float:right;
+	padding-left:20%;
+	margin-bottom:60px;
+	}
+.content3{
+	float:right;
+	width:100%;
+	padding:0;}
+.content4{
+	float:left;
+	width:80%;
+	padding-right:0;}	
+.work_contents img{
+	width:100%;
+	height:auto;
+	}
+.work_contents p{
+	padding:10px;
+	font-size:12px;
+	}		
+
+
+	
+.contents_wrap3{
+	padding:0 15px;
+}	
+.team_pic {
+  background-color: #aaa;
+  width: 50px;
+  height: 50px;
+}
+.contents_wrap3 p {
+  width: 60%;
+}
+   }

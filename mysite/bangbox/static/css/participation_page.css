@@ -125,7 +125,8 @@
 }
 .icon_wrap {
 	display: inline-block;
-	width: 90px;
+	  max-width: 80px;
+  width: 25%;
 	height: 70px;
 	margin: 0 auto;
 	margin-top: 10px;
@@ -134,7 +135,7 @@
 	width: 40px;
 	height: 40px;
 	margin: 0 auto;
-	background-color: red;
+	background-color:transparent;
 }
 .icon_text {
 	width: 100%;
@@ -167,12 +168,11 @@
 .map {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 40px;
+	margin-bottom: 55px;
 }
 .map_widget {
 	width: 100%;
 	height: 180px;
-	border: 1px solid #ddd;
 	background-color: #eee;
 	position: relative;
 }
@@ -214,7 +214,6 @@
 	text-align: center;
 	width: 100%;
 	padding:10px;
-	//text-shadow: -40px 0 50px #000;
 }
 #map_icon {
 	width: 21px;
@@ -234,12 +233,15 @@
 
 
 .wrapper_2 {
+	position: relative;
 	width: 100%;
 	height: 100%;
 	margin-bottom: 48px;
 }
 #profile_img_wrap {
-	width: 10%;
+	position:absolute;
+	left:0;
+	top:0;
 	width:auto;
 	height: 80px;
 	margin-right: 5%;
@@ -272,7 +274,8 @@
 }
 #profile_about_wrap {
 	position: relative;
-	width: 85%;
+	width:100%;
+	padding-left:70px;
 	height: inherit;
 	color: #545454;
 	float: right;
@@ -306,7 +309,7 @@
 	margin-left: 5%;
 	height: 20px;
 	text-align: right;
-	color: #71a5cc;
+	color: #08c;
 	border: none;
 	background-color: transparent;
 	font-size: 15px;
@@ -318,7 +321,8 @@
 /*=====attendant=====*/
 .attendant_wrap {
 	width: 88%;
-	height: 80px;
+	min-height: 80px;
+	height:auto;
 	float: left;
 }
 .view_attendee_list {
@@ -333,7 +337,7 @@
 	text-decoration: underline;
 }
 .view_attendee_list a {
-	color: #71a5cc;
+	color: #08c;
 }
 .attendant {
 	margin: 0 auto;
@@ -368,176 +372,49 @@
 	color: #333;
 	margin-top: 6px;
 }
-/*=====Comments=====*/
-		
-.comments {
-	color: #000;
-	width: 100%;
-	min-height: 50px;
-	height:auto;
-	clear: both;/*border:1px solid red;*/
-}
-.user_pic {
-	width: 10%;
-	min-width: 50px;
-	max-width: 50px;
-	height: 50px;
-	border:1px solid #eee;
-	/*border-radius: 50%;*/
-	background: #eee;
-	cursor: pointer;
-	float: left;
-}
-.user_pic img{
-	width:100%;
-	height:100%;
-	}
-.user_pic:hover {
-	opacity: 0.7;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}	
-.user_comment_wrap {
-	position: relative;
-	width: 89%;
-	min-height: 50px;
-	height:auto;
-	float: right;
-}
-.user_name {
-	font-size: 13px;
-	color: #333;
-	width:100%;
-	height: 20px;
-	line-height: 20px;
-	cursor: pointer;
-}
-.comments_text {
-	font-size: 13px;
-	color: #767676;
-	margin-bottom:10px;
-	width: 85%;
-	min-height: 20px;
-	height:auto;
-	line-height: 20px;/*border:1px solid red;*/
-}
-.more_btn {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 30px;
-	height: 30px;
-	margin: 0;
-	cursor: pointer;
-	float: right;
-}
-.more_btn_wrap {
-	position: absolute;
-	top: 30px;
-	right: 0;
-	width: 84px;
-	height: 84px;
-	text-align: center;
-	background: white;
-	border: 1px solid #ddd;
-	display: none;
-	z-index: 5;
-}
-.more_btn_wrap > li {
-	font-size: 13px;
-	height: 28px;
-	color: #767676;
-	line-height: 28px;
-}
-.more_btn_wrap > li:hover {
-	background: #eee;
-	color: #333;
-	cursor: pointer;
-}
-.more_btn:hover .more_btn_wrap, .more_btn:active .more_btn_wrap {
-	display: block;
-	transition-duration: 0.3s;
-}
-#more {
-	color: #a0a0a0;
-	width: 130px;
-	height: 40px;
-	margin:20px auto;
-	line-height: 40px;
-	font-size: 14px;
-	clear: both;
-	text-align: center;/*border-bottom:1px solid #f6f6f6;*/
-}
-#more:hover {
-	color: #066ab3;
-	cursor: pointer;
-}
-#my_comments {
-	position:relative;
-	color: #222;
-	width: 100%;
-	height: 50px;
-	clear: both;
-	margin-top: 30px;
-}
 
-.my_pic {
-	width: 10%;
-	min-width: 50px;
-	max-width: 50px;
-	height: inherit;
-	border:1px solid #eee;
-	/*border-radius: 50%;*/
-	background: #eee;
-	float: left;
-}
-.my_pic img{
-	width:100%;
-	height:100%;
-	}
-.my_comments {
-	font-size: 14px;
-	color: #333;
-	width: 89%;
-	height: inherit;
-	margin-left: 1%;
-	padding-left: 10px;
-	padding-right:60px;
-	float: right;
-	line-height: 170%;
-	background-color:transparent;
-	border: 1px solid #eee;
-	  border-right: none;
-	  overflow:auto;
-}
-#comment_enter{
-	position:absolute;
-	right:0;
-	width:55px;
-	height:inherit;
-	}
 /*--- right section ticketlist---*/	
-
-.ticketlist {
-	padding-right:10px;
+.ticketlist{
 	width: 100%;
 	height: 71px;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 	cursor: pointer;
-}
-
-.ticketlist_detail_image_wrap {
-	max-width: 100px;
-	width:40%;
-	height: 71px;
-	background-color: #eee;
-	border:1px solid #eee;
-	float: left;
-
+	position: relative;
 }
 .ticketlist_detail_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100px;
+	width: 100%;
+	height: inherit;
+	background-color: #eee;
+	border: 1px solid #eee;
+}
+.ticketlist_detail_image img {
 	width: 100%;
 	height: 100%;
+}
+.ticketlist_wrapper {
+	padding-left: 110px;
+	width: 100%;
+	height: 71px;
+	float: right;
+}
+.ticketlist_detail_title  {
+	font-size: 14px;
+	font-weight: bold;
+	  height: 20px;
+  line-height: 20px;
+	color: #333;
+	 margin-bottom: 4px;
+}
+.ticketlist_detail_time  {
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 200;
+	color: #767676;
+	line-height: 140%;
 }
 /*
 #check_event{
@@ -546,41 +423,12 @@
   border: 1px solid #eee;
 	}
 	*/
-.ticketlist_wrapper {
-	width: 60%;
-	height: 71px;
-	padding-left: 10px;
-	float: right;
-}
-.ticketlist_wrapper .ticketlist_detail_title {
-		font-size: 14px;
-	font-weight: bold;
-	  height: 20px;
-  line-height: 20px;
-	color: #333;
-	 margin-bottom: 4px;
-}
-.ticketlist_wrapper .ticketlist_detail_time {
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 200;
-	color: #767676;
-	line-height: 140%;
-}
-
 
 .temporary_storage:hover{
 	cursor: pointer;
 	background:#f9f9f9;
 	transition:all ease-out 0.4s;
 	}
-.temporary_event_detail_image {
-	max-width: 100px;
-	width:40%;
-	height: 71px;
-	background-color: #eee;
-	float: left;
-}
 
 
 
@@ -803,7 +651,9 @@
 
  
    @media screen and (max-width:420px) {
-
+.left_section, .right_section {
+  margin-top: 0;
+}
 	.wrapper_2 {
 	width: 100%;
 	height: 100%;
@@ -815,11 +665,11 @@
 	border:none;
 	}
 	   .section_text {
-		   padding-left:10px;
+		   padding-left:15px;
 	   }
 	   .left_section {
   width:100%;
-  height: 100%;
+  height: auto;
   padding:0;
   margin-right: 0;
   margin-bottom: 60px;
@@ -828,16 +678,28 @@
    }
    .right_section {
   width: 100%;
-  height: 100%;
-   padding: 50px 15px 20px 15px;
+  height: auto;
   float:none;
 }
+
+
+#event_detail_wrap .event_detail_title {
+  font-size: 20px;}
+#event_detail_wrap > p {
+  font-size: 12px;
+}
+
+
+
 .weather {
   width: 30%;
 }
 .weather_icon {
   margin: 0 auto;
   width: 70px;
+}
+.icon_text {
+  font-size: 12px;
 }
 #degree {
   font-size: 20px;
@@ -854,27 +716,113 @@
   margin-top: 10px;
 }
 
+.map_info {
+  font-size: 14px;
+}
+#map_info_detail {
+  padding-top: 0;
+    font-size: 12px;
+}
+/*개설자 프로필*/
+
+#profile_img_wrap {
+	position:absolute;
+	left:15px;
+}
+
+#profile_follow{
+	 font-size: 13px;
+	}
+
 #profile_about_wrap {
-  width: 78%;
+  padding-left: 52px;
 }
-
-
+#profile_about {
+  min-height: 42px;
+  height: 42px;
+  font-size:12px;
+}
+#profile_img {
+  width: 42px;
+  height: 42px;
+}
+#profile_homepage {
+  font-size: 12px;
+}
+/* 참여자 명단 */
+.view_attendee_list {
+    width: 100%;
+   min-width: auto;
+  text-align: center;
+  height: auto;
+  line-height: auto;
+    font-size: 13px;
+  
+}
+.attendant_wrap {
+  width: 100%;
+  min-height:80px;
+ height:auto;
+  float: left;
+}
+.attendant_pic {
+  width: 42px;
+  height: 42px;
+}
+#profile_name, .attendant_name {
+  font-size: 12px;
+}
+/* 댓글 */
+.user_pic {
+  width: 42px;
+  height: 42px;
+}
 .user_comment_wrap {
-  width:78%;
+  min-height: 42px;
+  padding-left: 52px;
 }
 
+#my_comments {
+  height: 42px;
+}
 .my_comments {
-	font-size: 13px;
-	width:78%;
+	padding-left: 10px;
+	padding-right:52px;
+	 height: 42px;
+	   font-size: 12px;
+}
+.comments_text {
+	padding-right:30px;
+	margin-bottom: 20px;
+}
+
+.my_pic {
+  width: 42px;
+  height: inherit;
+}
+
+#more {
+  font-size: 13px;
 }
 #comment_enter {
-  width: 50px;
-  height: inherit;
+  width: 42px;
+   height: 42px;
+     font-size: 12px;
   float: right;
 }	
+
+
+.ticketlist_detail_image {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	width: 100px;
+}
 .ticketlist_wrapper {
-  width: 65%;
-  float: left;
+	padding-left: 125px;
+	padding-right: 15px;
 }
 
    }
+   
+   

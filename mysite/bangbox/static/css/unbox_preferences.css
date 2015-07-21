@@ -1,9 +1,15 @@
+header{
+	display:block;
+	}
+#detail_header{
+	display:none;
+	}	 
+
 .wrap {
 	margin: 0 auto;
 	width: 90%;
 	max-width: 500px;
 	height: 100%;
-	margin-top: 70px;
 	margin-bottom: 100px;
 }
 /*
@@ -32,7 +38,7 @@
 #section_wrap {
 	margin: 0 auto;
 	padding-top: 10px;
-	border-top: 1px solid #f2f2f2;
+	/*border-top: 1px solid #f2f2f2;*/
 }
 .list_item {
 	position: relative;
@@ -209,29 +215,62 @@ label {
 	background-color: white;
 	border: 1px solid #066ab3;
 }
-#privacy_option {
-  padding: 0 10px;
-  background-color: #fff;
-  background: url(../img/create_event/down.png) no-repeat right center;
-}
 
 
  @media screen and (max-width:420px) {
+header{
+	display:none;
+	}
+#detail_header{
+	display:block;
+	}	 	 
+
+.hr_short {
+  display: none;
+}
+	 
 .wrap {
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
   height: 100%;
-  margin-top: 70px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom:0;
 }
-.list_item {
+#section_wrap {
+  border-top: none;
+  padding:0;
+}
+.email_input, .password_input, .privacy{
+  height: 42px;
 }
 
+.change_btn {
+  width: 100px;
+  height: 42px;
+  line-height:42px;
+}
+.onoffswitch {
+	width:100px;
+}
+label {
+  height: 42px;
+  width: 100px;}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
 
+	height: 42px;
+	line-height: 38px;
+}
 .email_input, .password_wrap, .privacy {
   min-width: 100%;
   width: 100%;
+  
+}
+.list_item p {
+  padding-left: 0;
+  width: 50%;
+  height: 42px;
+  line-height: 40px;
 }
 
 

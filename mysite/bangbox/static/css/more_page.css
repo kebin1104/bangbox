@@ -1,0 +1,101 @@
+
+.more_profile {
+	width: 100%;
+	  height: 170px;
+  padding: 30px;
+	background-color:#fafafa;
+	text-align: center;
+}
+.more_profile:hover {
+	background-color:#f1f1f1;
+	}
+
+
+.more_profile #user_pic {
+	width: 70px;
+	height: 70px;
+	float:none;
+	margin: 0 auto;
+	
+}
+#user_pic > img {
+	width: 100%;
+	height: 100%;
+}
+.more_profile #user_name {
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight:bold;
+	float: none;
+	text-align:center;
+	margin-top: 10px;
+	color: #333;
+}
+.more_profile p{
+	font-size: 12px;
+	}
+#more_list_wrap {
+	clear: both;
+	width: 100%;
+	height: auto;
+	background-color:#fefefe;
+	border-top: 1px solid #eee;
+}
+#more_list_wrap .more_list {
+	position:relative;
+	padding:0 15px 0 65px;
+	height: 46px;
+	line-height: 46px;
+	margin:10px 0;
+	text-align: left;
+}
+.icon_btn{
+	position:absolute;
+	left:15px;
+	top:4px;
+	width:38px;
+	height:38px;
+	background:#eee;
+	
+	}
+.bookmark_icon{
+	background:url(../img/more_page/bookmark_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+	.notify_icon{
+	background:url(../img/more_page/bookmark_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+
+	.notify_icon{
+	background:url(../img/more_page/notify_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+	.suggest_icon{
+	background:url(../img/more_page/suggest_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+	.help_icon{
+	background:url(../img/more_page/help_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+	.option_icon{
+	background:url(../img/more_page/option_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+	.logout_icon{
+	background:url(../img/more_page/logout_icon.png) no-repeat center center;
+	background-size:contain;
+	}
+ @media screen and (max-width:420px) {
+ footer{
+		display:none; 
+		 }
+		 .more_profile #user_pic {
+	width: 60px;
+	height: 60px;
+	
+}
+ }
