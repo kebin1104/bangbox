@@ -19,6 +19,7 @@
         <div class="login_wrap">
         	 <h1>bangbox</h1><br>
               <form action="{% url 'bangbox:signup_check' %}" method="POST">
+                  {% csrf_token %}
                     <div class="shadow">
                         <input type="email" name="email" placeholder="이메일" id="email" />
                         <div id="email_description">
