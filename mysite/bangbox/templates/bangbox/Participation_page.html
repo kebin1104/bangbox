@@ -1,0 +1,708 @@
+﻿{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>unbox 참여상자</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scal=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
+	<title>login</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="{% static 'css/unbox_custom.css' %}" rel="stylesheet">
+	<link href="{%static 'css/participation_page.css' %}" rel="stylesheet">
+	
+    
+    <!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/unbox_custom.js' %}"></script>
+  
+</head>
+
+<body>
+	<!--loading-->
+    <div id="delay" class="loading" name="delay"></div>
+    <!--btn_top-->
+    <a class="page-scroll hover_effect" href="body" id="btn_top"></a>
+    
+   <header>
+		<div class="container">
+			<nav class="main_menu"> 
+				<a href="index.html"><div id="logo"></div></a>
+                <div class="left_nav">
+					<span class="menu_item"><a href="index.html">이벤트</a></span>
+					<span class="menu_item"><a href="participation_page.html" id="menu_item_active">참여상자</a></span>
+                    <span class="menu_item"><a href="bookmark_page.html">보관상자</a></span>
+					<span class="menu_item"><a href="create_event.html">이벤트 만들기</a></span>
+				</div>
+                    
+                    
+                    <!----- 모바일 웹 헤더 ---->
+                    <div class="moblie_menu_item">
+                    	<a href="index.html">
+                        <span class="menu_icon_wrap">
+                        	<div class="menu_icon2 menu_icon_event"></div>
+                        </span>
+                        </a>
+                        <a href="participation_page.html">
+                        <span class="menu_icon_wrap">
+                        	<div class="menu_icon2 menu_icon_participation" id="participation_active"></div>
+                        </span>
+                        </a>
+                        <!--
+                        <a href="create_event.html">
+                        <span class="menu_icon_wrap">
+                        	<div class="menu_icon2 menu_icon_create"></div>
+                        </span>
+                        </a>-->
+                        <a href="search_page.html">
+                        <span class="menu_icon_wrap">
+                            <div class="menu_icon2 menu_icon_search"></div>
+                        </span>
+                        </a>
+                        <a href="push_page.html">
+                        <span class="menu_icon_wrap">
+                        	<div class="menu_icon2 menu_icon_push"></div>
+                            <div id="push_number">
+                        	<p>1
+                            </p>
+                        </div>
+                        </span>
+                        </a>
+                        <a href="more_page.html">
+                        <span class="menu_icon_wrap">
+                    		<div class="menu_icon2 menu_icon_more"></div>
+                            
+						</span>
+                        </a>
+                    </div>
+                    
+                <div class="right_nav">  
+                
+                	<a href="search_page.html">
+                    <span class="menu_icon_wrap">
+                        <div class="menu_icon menu_icon_search"></div>
+                    </span>
+                    </a>
+                    <span class="menu_icon_wrap" onclick="toggle_push_selection()">
+                        <div class="menu_icon menu_icon_push"></div>
+                        <div id="push_number">
+                        	<p>1
+                            </p>
+                        </div>
+                    </span>
+					<span class="menu_icon_wrap"  onclick="toggle_more_selection()">
+                    	<div class="menu_icon menu_icon_more"></div>
+                    	
+					</span>
+                    <div class="mouseover" id="menu_icon_push_mouseover">
+                        	<a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="{% static 'img/11.jpg' %}">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용알림내용알림내용알림내용알림내알림내용알림내용알림내용알림내용알림내알림내용알림내용알림내용알림내용알림내용알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+							<a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="{% static 'img/1.jpg' %}">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+							<a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="{% static 'img/3.jpg' %}">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+                            <a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="../static/img/2.jpg">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+                            <a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="../static/img/3.jpg">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+                            <a href="#">
+							<div class="push_content">
+								<div class="nav_pic">
+                                	<img class="img-responsive" src="../static/img/10.jpg">
+                                </div>
+								<div class="nav_content_text ellipsis">알림내용</div>
+								<div class="nav_content_text_time">5분전</div>
+							</div>
+                            </a>
+							<a href="push_page.html"><div class="push_detail_btn">자세히 보기</div></a>
+						</div>
+                     <div class="mouseover" id="menu_icon_more_mouseover">
+							<div class="more_mouseover_profile">
+								<a href="profile.html">
+								<div id="user_pic">
+                                	<img class="img-responsive" src="../static/img/11.jpg">
+                                </div>
+								<div id="user_name">신연석</div>
+								</a>
+							</div>
+							<ul id="more_list_wrapper">
+								<a href="join-invite-friend.html"><li class="more_list">친구초대</li></a>
+								<a href="customer_service.html"><li class="more_list">고객지원</li></a>
+								<a href="preferences_page.html"><li class="more_list">설정</li></a>
+								<a href="logout.html"><li class="more_list">로그아웃</li></a>																								
+							</ul>
+					 </div>
+                 </div>   
+			</nav>  
+		</div>
+	</header>
+    
+    <div class="container">
+        
+        <section class="left_section" id="">
+            <!--=====my_event======-->
+             <p class="section_text section_top">다가오는 이벤트</p>
+             <a href="event_page.html">
+             <div class="wrapper_my_event">
+             	<div class="bg_black">
+                	<div id="event_detail_wrap">
+                    	<h1 class="event_detail_title">이벤트 제목</h1>
+                    	<p>2015년 1월 15일, 금요일</p>
+                    </div>
+                </div>                
+                <img  class="event_image" src="../static/img/event1.jpg">                
+            </div>   
+			</a>	
+         
+         	
+		
+        <!--======weather=======-->
+        
+        <div class="weather">
+            <p class="section_text">날씨<span class="section_info">맑음</span></p>
+            <div class="weather_wrapper">
+                <div class="weather_icon">
+                    <img src="../static/img/Participation_page/Slightly cloudy.png"/>
+                </div>
+                <ul class="weather_info">
+                    <li id="degree">-3°C</li>
+                </ul>
+            </div>
+        </div>	
+        
+        <!--======icon=======-->
+        
+        <div class="button_icon">
+            <p class="section_text" style="color:rgba(0,0,0,0)">기타</p>
+            <span id="left_line"></span>
+            <div class="button_icon_wrapper">
+            
+                <a class="icon_wrap page-scroll hover_effect" href="#attendant_section">
+                	<div class="icon" id="attendant_icon"></div>
+                    <p class="icon_text">참여자</p>
+                </a>
+                
+                 <a class="icon_wrap page-scroll hover_effect" href="#comment_section">
+                	<div class="icon" id="comment_icon"></div>
+                    <p class="icon_text">댓글</p>
+                </a>
+                
+                 <a class="icon_wrap hover_effect" href="#receipt_popup" data-toggle="modal">
+                	<div class="icon" id="receipt_icon"></div>
+                    <p class="icon_text">영수증</p>
+                </a>
+                
+            </div>
+        </div>	    
+                              
+        <!--======map=======-->
+        <p class="section_text">지도</p>
+        <div class="map">
+            
+            <div class="map_widget">
+                 <div id="map"></div>
+                 <div class="bg_black2">
+                     <ul class="map_info">
+                     	 <div id="map_icon"></div>
+                         <li>경기도 성남시 분당구 정자동</li>
+                         <li id="map_info_detail">빌딩 5층 엔젤리너스(상세정보)</li>
+                     </ul>
+                 </div> 
+            </div>
+            
+        </div>	
+        
+        <!--=======daum_map_api
+		<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=발급받은 API KEY를 넣으시면 됩니다."></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new daum.maps.LatLng(33.450701, 126.570667),
+                level: 3
+            };
+    
+            var map = new daum.maps.Map(container, options);
+        </script>
+        <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=APIKEY&libraries=LIBRARY"></script>
+      ------>
+           
+                    
+                
+                
+		 <!--====Establishment======-->
+		<p class="section_text" id="attendant_section">개설자 프로필</p> 
+		<div class="wrapper_2">
+        	
+        	<a href="profile.html">
+        	<div id="profile_img_wrap">
+                <div id="profile_img">
+                	<img src="../static/img/12.jpg">
+                </div>
+                <div id="profile_name">신연석</div>
+            </div>
+            </a>
+            <div id="profile_about_wrap">
+                <p id="profile_about">안녕하세요. 저는 디자인을 좋아하는 신연석입니다.</p>
+                <p id="profile_homepage">www.facebook.com/unbox</p>
+                <input type="button"  id="profile_follow" value="+ 팔로우">
+            </div>
+			<div style="clear:both"></div>
+        </div>      
+					
+					
+		 <!--====attendant======-->
+		 
+		<p class="section_text">참여자<span class="section_info">10/10명 참여</span></p>
+		<div class="wrapper_2">
+        	
+        	<div class="attendant_wrap">
+				<span class="attendant">
+                	<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/1.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">이승호</div>
+				</span>	
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/2.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">신연석</div>
+				</span>
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/3.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">방윤완</div>
+				</span>	
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/5.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">김지혁</div>
+				</span>	
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/4.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">김대건</div>
+				</span>	
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/6.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">이현우</div>
+				</span>
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/7.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">한우석</div>
+				</span>	
+				<span class="attendant">
+					<a href="profile.html">
+					<div class="attendant_pic">
+                    	<img src="../static/img/8.jpg">
+                    </div>
+                    </a>
+					<div class="attendant_name">김지혜</div>
+				</span>
+             </div>
+             <div class="view_attendee_list">
+             	<a href="#participation_member" data-toggle="modal">명단보기</a>  
+             </div>	
+             <div style="clear:both"></div>
+		 </div>      
+					
+		 <!--====comments======-->
+		 
+		<p class="section_text" id="comment_section">댓글<span class="section_info">24개</span></p>
+		<div class="wrapper_2">
+        	
+			<div class="comments">
+            	<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/1.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">이승호</div>
+                    <p class="comments_text">이 행사는 스타트업 관계자를 대상으로한 행사입니다. 스타트업을 준비하고 계시거나, 
+스타트업에서 일하고 있으신 관계자를 대상으로 한 행사이오니 유의하시기 바랍니다.</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+			<div class="comments">
+				<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/2.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">김지혜</div>
+                    <p class="comments_text">마케팅이라 재밌고 어렵겠네요~^^</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+            <div class="comments">
+				<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/3.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">한아름</div>
+                    <p class="comments_text">미래의 방향과 가치를 알아내고 서로 공유하는 유익한 자리에 꼭 참석하고 싶네요!</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+            <div class="comments">
+				<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/4.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">이승호</div>
+                    <p class="comments_text">열정적이고 창의적인 기업과의 만남을 기대합니다.</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+            <div class="comments">
+				<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/5.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">방윤환</div>
+                    <p class="comments_text">수고가 많으시네요!ㅎㅎ 가입 초보자입니다. 곧 연락드릴게요!</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+            <div class="comments">
+				<a href="profile.html">
+				<div class="user_pic">
+                	<img src="../static/img/6.jpg">
+                </div>
+                </a>
+                <div class="user_comment_wrap">
+                    <div class="user_name">김지수</div>
+                    <p class="comments_text">혼자 이른나이에 부모님으로부터 독립하여서 요즘들어 알지모를 답답함과 막막함이 들어 저에게, 제 자신에게 힐링의 시간을 주고 싶습니다. 부탁드리겠습니다.</p>
+                    <div class="more_btn">
+                        <img src="../static/img/Participation_page/more_btn.png">
+                         <ul class="more_btn_wrap">
+                             <li class="more_btn_list">댓글 수정</li>
+                             <li class="more_btn_list">댓글 삭제</li>
+                             <li class="more_btn_list">신고하기</li>
+                         </ul>
+                    </div>
+               </div>
+			</div>
+			<div id="more">댓글 더보기<img src="../static/img/dropdown_arrow.png"></div>
+			<div id="my_comments">
+            	<a href="profile.html">
+                    <div class="my_pic">
+                        <img src="../static/img/7.jpg">
+                    </div>
+                </a>
+                <div class="user_comment_wrap">
+               		<textarea placeholder="댓글을 입력해주세요." class="my_comments"></textarea>
+                    <input type="button" value="입력" id="comment_enter">
+                </div>
+                
+			</div>
+		</div>	
+    </section><!--left section End-->
+    
+	
+	<section class="right_section" id="">
+    <!--======rightsection_ticketlist=======-->
+		<p class="section_text">참여한 이벤트 목록<span class="section_info">3장</span></p>
+		
+        <a href="#">
+        	<article class="ticketlist hover_effect" id="check_event"> 
+            	<div class="ticketlist_detail_image" >
+                    <img src="../static/img/event1.jpg">
+                </div>
+                <div class="ticketlist_wrapper">
+				 	<h1 class="ticketlist_detail_title ellipsis">이벤트 제목</h1>
+				 	<p class="ticketlist_detail_time ellipsis">1월15일 금요일 16:00</p>
+                </div>
+            </article>
+        </a>
+        <a href="#">
+        	<article class="ticketlist hover_effect"> 
+            	<div class="ticketlist_detail_image" >
+                    <img src="../static/img/event2.jpg">
+                </div>
+                <div class="ticketlist_wrapper">
+				 	<h1 class="ticketlist_detail_title ellipsis">이벤트 제목</h1>
+				 	<p class="ticketlist_detail_time ellipsis">1월15일 금요일 16:00</p>
+                </div>
+            </article>
+        </a>
+        <a href="#">
+        	<article class="ticketlist hover_effect"> 
+            	<div class="ticketlist_detail_image" >
+                    <img src="../static/img/event3.jpg">
+                </div>
+                <div class="ticketlist_wrapper">
+				 	<h1 class="ticketlist_detail_title ellipsis">이벤트 제목</h1>
+				 	<p class="ticketlist_detail_time ellipsis">1월15일 금요일 16:00</p>
+                </div>
+            </article>
+        </a>
+	</section><!--right section End-->	
+	  
+</div> <!--Container End-->
+   
+  <!--=====Footer======-->
+  <footer>
+		<div id="wrapper_footer">
+			<ul id="footer_menu">
+				<li class="footer_menu"><a href="unbox_team.html">회사소개</a></li>
+				<li class="footer_menu"><a href="partnership_proposal.html">제휴제안</a></li>
+				<li class="footer_menu"><a href="unbox_policy.html">이용약관</a></li>
+				<li class="footer_menu" id="last_menu"><a href="customer_service.html">고객지원</a></li>
+			</ul>
+            <div class="hr_short"></div>
+            <p id="copyright">
+				Copyright © 2015 unbox Inc. All rights reserved.
+			</p>
+		</div>	
+  </footer>
+  
+  <!--modal popup1 attendant-->
+	<div class="modal fade in" id="participation_member" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content popup_section">
+				<div class="modal-header">
+                	<div class="vertical_align">
+                         <p class="section">참여자 명단
+                             <span class="section_info">4명</span>
+                         </p>
+                         <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">
+                           <img src="../static/img/participation_page/x_btn.png">
+                         </button>
+                     </div>    
+                 </div>
+                 <div class="popup_wrap">
+                 	 <div class="popup_contents_wrap" id="scroll">
+                         <div class="follow">
+                         	  <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/3.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">팔로우</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/2.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">팔로우</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/4.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">팔로우</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/1.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">팔로우</button>
+                         </div>
+                         <div class="follow">
+                              <a href="profile.html">
+                              <div class="follow_pic">
+                                 <img src="../static/img/6.jpg">
+                              </div>
+                              </a>
+                              <div class="follow_name">이름</div>
+                              <div class="follow_location">지역</div>
+                              <button class="follow_btn">팔로우</button>
+                         </div>
+                         
+                     </div>
+                     <div class="modal-footer1">
+                     	  <div class="vertical_align">
+                             <input type="checkbox" id="all_check" value="" name="all" />
+                             <label for="all_check" class="all_check_btn">전체 팔로우</label>
+                         </div>
+                 	 </div>
+                 </div>    
+                 
+          	</div><!--modal-content end-->
+		</div>
+	</div>
+    
+
+  <!--modal popup3 receipt-->
+	<div class="modal fade in" id="receipt_popup" aria-hidden="false">
+		<div class="modal-dialog3">
+			<div class="modal-content4 popup_section">
+            	<div id="receipt_top"></div>
+                  <p class="section"></p>
+                  <button type="button" id="close" class="close2" data-dismiss="modal" aria-hidden="true">
+                       <img src="../static/img/participation_page/x_btn.png">
+                  </button>
+                  <div class="receipt_wrap">
+                      <div class="receipt_section_1">
+                         <h1>이벤트 제목</h1>
+                         <div id="time">15/03/12 16:23(발급시간)</div>
+                         <div id="ticket">2 Tickets</div>
+                         <div id="ticketnumber_wrap">
+                             <p id="ticket_no">Ticket No.</p>
+                             <ul id="ticket_number">
+                                 <li>43059-22</li>
+                                 <li>40334-23</li>
+                             </ul>
+                         </div>    
+                         <div id="price_wrap">
+                             <span id="per">장당</span>
+                             <span id="price">6000원</span>
+                         </div>
+                     </div>    
+                     <div class="receipt_section_2">
+                     	 <div class="contacts_info">
+                             <div id="icon1"></div>
+                             <div class="name_wrap">
+                                 <div class="section2_text">개설자</div>
+                                 <div class="name">신연석</div>
+                             </div>    
+                             <div class="tel">010-1234-5678</div>
+                         </div>
+                       	 <div class="contacts_info">  
+                             <div id="icon2"></div>
+                             <div class="name_wrap">
+                                <div class="section2_text">unbox</div>
+                                <div class="name">고객센터</div>
+                             </div>  
+                             <div class="tel">031-1234-5678</div> 
+                         </div>                     
+                     </div>
+                     <div class="receipt_section_3"> 
+                     	 <div class="policy_info">
+                             <div class="section_text2">이용약관</div>
+                             <textarea readonly class="textarea">이용약관들어갈 곳</textarea>
+                         </div>
+                         <div class="policy_info">
+                             <div class="section_text2">환불정책</div>
+                             <textarea readonly class="textarea">이용약관들어갈 곳</textarea>
+                         </div>
+                     </div>  
+                 </div>    
+                 <div id="receipt_bottom"></div> 
+          	</div><!--modal-content end-->
+		</div>
+	</div>
+ 
+
+  
+  
+</body>
+</html>
