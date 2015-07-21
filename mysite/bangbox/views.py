@@ -14,7 +14,10 @@ def bang(request):
 def login(request):
     return render(request, 'bangbox/login.html')
 
-def check(request):
+def singup(request):
+    return render(request, 'bangbox/signup.html')
+
+def login_check(request):
     if request.method == 'POST':
         post_email = request.POST['u_email']
         post_password = request.POST['pass']
