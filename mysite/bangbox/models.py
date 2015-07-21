@@ -10,3 +10,9 @@ class Bangbox_user(models.Model):
 
     def __unicode__(self):
         return self.email
+
+    def save(self, *args, **kwargs):
+
+        self.set_password(self.password)
+
+        super(Bangbox_user, self).save(*args, **kwargs)

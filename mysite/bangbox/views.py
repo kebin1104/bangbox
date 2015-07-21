@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from bangbox.models import User
+from bangbox.models import Bangbox_user
 
 # Create your views here.
 
@@ -19,7 +19,7 @@ def check(request):
         post_email = request.POST['u_email']
         post_password = request.POST['pass']
 
-        data = User.objects.filter(email=post_email
+        data = Bangbox_user.objects.filter(email=post_email
                                    ).filter(password=post_password
                                             ).count()
 
