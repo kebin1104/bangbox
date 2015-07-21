@@ -4,7 +4,7 @@
 <html lang="ko">
 
 <head>
-	<title>unbox 로그인</title>
+	<title>bangbox 로그인</title>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scal=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
 	<title>login</title>
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
 
     	<section class="container">
             <div class="login_wrap">
-            	<h1>unbox</h1>
+            	<h1>bangbox</h1>
                 <form action="{% url 'bangbox:check' %}" method="POST">
                     {% csrf_token %}
                         <input type="email" name="u_email" placeholder="이메일" id="email" />

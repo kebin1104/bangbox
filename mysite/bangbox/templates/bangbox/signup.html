@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scal=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
+    
+	<title>unbox 회원가입</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="{% static 'css/unbox_custom.css' %}" rel="stylesheet">
+	<link type="text/css" href="{% static 'css/intro_style.css' %}" rel="stylesheet" >
+    <script src="{% static 'js/unbox_custom.js' %}"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login_wrap">
+        	 <h1>unbox</h1><br>
+              <form action="#" method="post">
+                    <div class="shadow">
+                        <input type="email" name="u_email" placeholder="이메일" id="email" />
+                        <div id="email_description">
+                              <div id="triangle"></div>
+                              <div id="description">
+                              		<p>로그인과 비밀번호 찾기에 <br/>사용됩니다.<br/></p><p style="color:red; font-size:14px;">꼭 정확하게 입력해주세요.</p>
+                              </div>
+                        </div>
+                        <input id="pw" type="password" name="u_pass" id="password1" placeholder="비밀번호"/>
+                        <input id="pw_check" type="password" name="u_pass" placeholder="비밀번호 재입력"style="border-bottom:none;"/>
+                    </div>
+                    <p class="signup_error" id="signup_error" style="display:none;">
+                    	이메일이나 비밀번호가 정확하지 않습니다.
+                    </p>
+                    <div id="chk_box_wrap">
+                            <input type="checkbox" id="chk_button"/>
+                            <label for="chk_button" id="chk_btn"></label><span id="chk_btn_label"><a href="unbox_policy.html" target="_blank" class="chk_box_label"><strong>서비스 약관</strong></a>을 읽었으며 이에 동의합니다.</span>
+                    </div>
+                    <button id="reg_new" type="button" title="회원가입"  class="signup login_submit shadow" onclick="location.href = 'join-verify.html'" />가입</button>
+                    <div id="facebook_wrap"  class="shadow">
+                        <input type="button" name="signup" class="facebook_login_submit" value="페이스북으로 가입" onclick="location.href = 'join-verify.html'" />
+                        <img src="{% static 'img/intro/facebook_icon.png' %}" id="facebook_icon">
+                    </div>    
+              </form>
+    
+              <div class="login_help">
+                  <a href="login.html">이미 회원이신가요? 로그인</a>
+              </div>
+        </div>    
+        
+        <script type="text/javascript">
+               var modal= document.getElementById('email_description');
+                  document.getElementById('email').onclick= function() {
+                       email_description.style.display=email_description.style.display= 'block';
+                       };
+                  document.getElementById('email').onblur= function() {
+                       email_description.style.display=email_description.style.display= 'none';
+                       };
+        </script>
+     </div>   
+     
+     <div id="login_footer">
+            <p id="copyright">
+                       Copyright © 2015 unbox Inc. All rights reserved.
+            </p>
+            <ul id="footer_menu">
+                <li class="footer_menu"><a href="unbox_team.html">회사소개</a></li>
+				<li class="footer_menu"><a href="partnership_proposal.html">제휴제안</a></li>
+				<li class="footer_menu"><a href="unbox_policy.html">이용약관</a></li>
+				<li class="footer_menu" id="last_menu"><a href="customer_service.html">고객지원</a></li>
+            </ul>
+        </div>
+</body>
+
+</html>
