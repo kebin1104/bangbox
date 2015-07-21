@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from bangbox.models import User
+from bangbox.models import Bangbox_user
 
 # Register your models here.
 
-admin.site.register(User)
+admin.site.register(Bangbox_user)
