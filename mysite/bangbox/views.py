@@ -14,7 +14,7 @@ def bang(request):
 def login(request):
     return render(request, 'bangbox/login.html')
 
-def singup(request):
+def signup(request):
     return render(request, 'bangbox/signup.html')
 
 def login_check(request):
