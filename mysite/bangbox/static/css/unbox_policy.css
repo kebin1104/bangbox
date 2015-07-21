@@ -1,0 +1,47 @@
+
+article{
+	border:1px solid #f7f7f7;
+	margin:0 auto;
+	margin-top:30px;
+	max-width: 640px;
+    height: 860px;
+	height:auto;
+	background-color: #f9f9f9;
+
+	min-height:500px;
+	padding:15px;	
+}
+.textarea{
+	width:90%;
+	max-width:550px;
+	margin:0 auto;
+	padding:30px;
+	padding-bottom:100px;
+	min-height:720px;
+	height:auto;
+	font-size:15px;
+	line-height:170%;
+	color:#545454;
+	border:none;
+	resize:none;
+}
+
+ @media screen and (max-width:420px) {
+	   .container, .container2 {
+  padding: 15px;
+}
+article{
+	margin-top:0;
+	height:auto;
+	padding:15px;	
+}
+.hr_short2 {
+  display: none;
+}  	
+
+.textarea {
+  width: 100%;
+    padding: 10px;
+	padding-bottom:40px;
+	font-size:13px;
+}
