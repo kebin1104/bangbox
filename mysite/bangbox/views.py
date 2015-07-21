@@ -17,6 +17,21 @@ def login(request):
 def signup(request):
     return render(request, 'bangbox/signup.html')
 
+def signup_check(request):
+
+    if request.method == 'POST':
+        post_email = request.POST['email']
+        post_password = request.POST['password']
+        post_name = 'bang'
+
+        data = Bangbox_user(email=post_email, name=post_name, password=post_password)
+        data.save()
+
+    else:
+        return render(request, 'bangbox/signup.html')
+
+    return render(request, 'bangbox/login.html')
+
 def event_page(request):
     return render(request, 'bangbox/event_page.html')
 

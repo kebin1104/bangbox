@@ -18,17 +18,17 @@
     <div class="container">
         <div class="login_wrap">
         	 <h1>bangbox</h1><br>
-              <form action="#" method="post">
+              <form action="{% url 'bangbox:signup_check' %}" method="POST">
                     <div class="shadow">
-                        <input type="email" name="u_email" placeholder="이메일" id="email" />
+                        <input type="email" name="email" placeholder="이메일" id="email" />
                         <div id="email_description">
                               <div id="triangle"></div>
                               <div id="description">
                               		<p>로그인과 비밀번호 찾기에 <br/>사용됩니다.<br/></p><p style="color:red; font-size:14px;">꼭 정확하게 입력해주세요.</p>
                               </div>
                         </div>
-                        <input id="pw" type="password" name="u_pass" id="password1" placeholder="비밀번호"/>
-                        <input id="pw_check" type="password" name="u_pass" placeholder="비밀번호 재입력"style="border-bottom:none;"/>
+                        <input id="pw" type="password" name="password" id="password1" placeholder="비밀번호"/>
+                        <input id="pw_check" type="password" name="pass_check" placeholder="비밀번호 재입력"style="border-bottom:none;"/>
                     </div>
                     <p class="signup_error" id="signup_error" style="display:none;">
                     	이메일이나 비밀번호가 정확하지 않습니다.
@@ -37,7 +37,7 @@
                             <input type="checkbox" id="chk_button"/>
                             <label for="chk_button" id="chk_btn"></label><span id="chk_btn_label"><a href="unbox_policy.html" target="_blank" class="chk_box_label"><strong>서비스 약관</strong></a>을 읽었으며 이에 동의합니다.</span>
                     </div>
-                    <button id="reg_new" type="button" title="회원가입"  class="signup login_submit shadow" onclick="location.href = 'join-verify.html'" />가입</button>
+                    <button id="reg_new" type="submit" title="회원가입"  class="signup login_submit shadow" onclick="" />가입</button>
                     <div id="facebook_wrap"  class="shadow">
                         <input type="button" name="signup" class="facebook_login_submit" value="페이스북으로 가입" onclick="location.href = 'join-verify.html'" />
                         <img src="{% static 'img/intro/facebook_icon.png' %}" id="facebook_icon">
