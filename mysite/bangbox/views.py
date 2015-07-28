@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from bangbox.models import Bangbox_user
+from bangbox.models import Bangbox_user, event
 
+from rest_framework import viewsets
+
+from bangbox.serializers import bangboxEventSerializer
 # Create your views here.
 
 def index(request):
@@ -54,3 +57,7 @@ def login_check(request):
 
     else:
         return HttpResponseRedirect(request, 'bangbox/bang.html')
+
+class eventViewSet(viewsets.ModelViewSet):
+    queryset = event.objects.all()
+    serializer_class = bangboxEventSerializer
