@@ -17,3 +17,6 @@ class event(models.Model):
     price = models.IntegerField(null=False)
     datetime = models.DateTimeField('date published')
     imageURL = models.URLField(null=False)
+
+    def __unicode__(self):
+        return self.title
