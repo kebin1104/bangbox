@@ -9,3 +9,11 @@ class Bangbox_user(models.Model):
 
     def __unicode__(self):
         return self.email
+
+class event(models.Model):
+    title = models.CharField(null=False, max_length=20)
+    sub = models.CharField(null=False, max_length=30)
+    address = models.CharField(null=False, max_length=30)
+    price = models.IntegerField(null=False)
+    datetime = models.DateTimeField('date published')
+    imageURL = models.URLField(null=False)
