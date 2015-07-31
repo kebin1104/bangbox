@@ -12,6 +12,7 @@ class user(models.Model):
 
 class event(models.Model):
     user_id = models.ForeignKey(user)
+    category_id = models.ForeignKey('category')
     title = models.CharField(null=False, max_length=26)
     sub = models.CharField(null=False, max_length=50)
     article = models.TextField()

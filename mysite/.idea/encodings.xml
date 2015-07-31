@@ -13,5 +13,6 @@
     <file url="file://$PROJECT_DIR$/mysite/__init__.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mysite/settings.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mysite/urls.py" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
