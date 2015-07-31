@@ -27,7 +27,7 @@ router.register(r'events', views.eventViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/events/', include('bangbox.urls', namespace="api_event")),
+    url(r'^api/', include('bangbox.urls', namespace="api_event")),
     url(r'^bangbox/', include('bangbox.urls', namespace="bangbox")),
     url(r'^admin/', include(admin.site.urls)),
 ]
