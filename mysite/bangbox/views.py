@@ -63,8 +63,8 @@ class eventViewSet(viewsets.ModelViewSet):
     queryset = event.objects.all()
     serializer_class = bangboxEventSerializer
 
-    def __get__(self, request, pk, format=None):
-        querset = event.objects.filter(id=pk)
-        serializer_class = bangboxEventSerializer(querset, many=True)
+    def get(self, request, pk, format=None):
+        queryset = event.objects.filter(id=pk)
+        serializer_class = bangboxEventSerializer(queryset, many=True)
 
         return Response(serializer_class.data)
