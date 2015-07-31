@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from bangbox.models import Bangbox_user, event
+from bangbox.models import user, event
 
 # Register your models here.
 
