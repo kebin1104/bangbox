@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from bangbox.models import Bangbox_user, event
+from bangbox.models import user, event
 
 from rest_framework import viewsets
 
@@ -46,7 +46,7 @@ def login_check(request):
         post_email = request.POST['u_email']
         post_password = request.POST['pass']
 
-        data = Bangbox_user.objects.filter(email=post_email
+        data = user.objects.filter(email=post_email
                                    ).filter(password=post_password
                                             ).count()
 
