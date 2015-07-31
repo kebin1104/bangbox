@@ -81,3 +81,8 @@ def api_event(request):
         serialdata = bangboxEventSerializer(data)
 
         return JSONResponse(serialdata.data)
+    else:
+        data = event.objects.all()
+        serialdata = bangboxEventSerializer(data)
+
+        return JSONResponse(serialdata.data)
