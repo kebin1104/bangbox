@@ -60,8 +60,8 @@ def login_check(request):
         return HttpResponseRedirect(request, 'bangbox/bang.html')
 
 class eventViewSet(viewsets.ModelViewSet):
-    queryset = event.objects.all()
-    serializer_class = bangboxEventSerializer
+    # queryset = event.objects.all()
+    # serializer_class = bangboxEventSerializer
 
     def get(self, request, pk, format=None):
         queryset = event.objects.filter(id=pk)
