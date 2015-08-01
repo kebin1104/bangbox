@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^photo/$', 'photo.views.single_photo', name='view_single_photo'),
 ]
